@@ -25,7 +25,7 @@ y_pred_lr = regressor_lr.predict(X_test)
 # Fitting SVR to the dataset
 # And Predicting a new result
 from sklearn.svm import SVR
-regressor_svr = SVR(kernel = 'rbf', gamma='auto')
+regressor_svr = SVR(kernel = 'rbf', gamma='scale', C=1.0)
 regressor_svr.fit(X_train, Y_train)
 #y_pred_svr = regressor.predict([[6.5]])
 y_pred_svr = regressor_svr.predict(X_test)
